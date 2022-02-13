@@ -1,6 +1,8 @@
 import java.util.List;
 
-public class RealEstate implements IRealEstate<RealEstate> {
+//taşınmaz mülk sınıfı
+public class RealEstate {
+    public String name;
     public int price;
     public int squareMeters;
     public int numberOfRooms;
@@ -9,20 +11,14 @@ public class RealEstate implements IRealEstate<RealEstate> {
     public RealEstate(){
 
     }
-    public RealEstate(int price, int squareMeters, int numberOfRooms, int numberOfHalls) {
+    public RealEstate(String name,int price, int squareMeters, int numberOfRooms, int numberOfHalls) {
+        this.name=name;
         this.price = price;
         this.squareMeters = squareMeters;
         this.numberOfRooms = numberOfRooms;
         this.numberOfHalls = numberOfHalls;
     }
 
-    @Override
-    public int totalPrice(RealEstate realEstate) {
-        return 0;
-    }
 
-    @Override
-    public List<RealEstate> realEstateCount(RealEstate realEstate) {
-        return null;
-    }
+
 }
